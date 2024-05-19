@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package br.com.postman.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -21,13 +17,13 @@ public class Principal {
     @JsonProperty("cidade")
     private String Cidade;
     
-    @JsonProperty("cidadeInfo")
+    @JsonProperty("cidade_info")
     private CidadeInfo cidadeInfo; 
     
     @JsonProperty("estado")
     private String estado;
     
-    @JsonProperty("estadoInfo")
+    @JsonProperty("estado_info")
     private EstadoInfo estadoInfo;
 
     public String getBairro() {
@@ -76,5 +72,12 @@ public class Principal {
 
     public void setEstadoInfo(EstadoInfo estadoInfo) {
         this.estadoInfo = estadoInfo;
+    }
+
+    @Override
+    public String toString() {
+        return "Principal{" + "Bairro=" + Bairro + ", Cep=" + Cep + ", Cidade=" + 
+                Cidade + ", cidadeInfo=" + cidadeInfo + ", estado=" + 
+                estado + ", estadoInfo=" + estadoInfo + '}';
     }
 }

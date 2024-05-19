@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package br.com.postman.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -33,6 +29,9 @@ public class CidadeInfo {
     public void setCodigoIbge(String codigoIbge) {
         this.codigoIbge = codigoIbge;
     }
-    
 
+    @Override
+    public String toString() {
+        return "CidadeInfo{" + "area=" + area + ", codigoIbge=" + codigoIbge + '}';
+    }
 }
