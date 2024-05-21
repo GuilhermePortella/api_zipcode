@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class EstadoInfo {
     
-    @JsonProperty("area")
+    @JsonProperty("area_km2")
     private String area;
     
     @JsonProperty("codigo_ibge")
