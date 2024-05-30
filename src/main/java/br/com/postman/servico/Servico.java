@@ -12,14 +12,15 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class Servico {
 
-    @Autowired
     private RestTemplate restTemplate;
+    private static  final String URL = "https://api.postmon.com.br/v1/cep/14680000";
+
+    
+    public Servico(RestTemplate restTemplate){
+        this.restTemplate = restTemplate;
+    }
     
     public Principal consumidor(){
-        String url = "https://api.postmon.com.br/v1/cep/14680000";
-        Principal principal = restTemplate.getForObject(url, Principal.class);
-        
-        return principal;
+        return restTemplate.getForObject(URL, Principal.class);
     }
-
 }
