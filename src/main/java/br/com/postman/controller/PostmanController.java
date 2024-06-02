@@ -19,6 +19,10 @@ public class PostmanController {
     
     @Autowired
     private Servico servico;
+    
+    String home(){
+        return "Hello world!";
+    }
         
     @GetMapping("consumidor")
     public ResponseEntity consumer(){
